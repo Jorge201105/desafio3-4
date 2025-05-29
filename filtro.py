@@ -22,17 +22,19 @@ tipo_comparacion = 'mayor'
 if len(sys.argv) == 3:
     tipo_comparacion = sys.argv[2].lower()
 
-if tipo_comparacion not in ["mayor","menor"]:
+if tipo_comparacion != "mayor" and tipo_comparacion != "menor":
     print("Lo sentimos, no es una operación válida")
 
 else:
     productos_que_cumplen = filtro(precios, umbral, tipo_comparacion)
-
+    # se genera un diccionario con lo que cumple
+    # print(productos_que_cumplen)
     if tipo_comparacion == 'mayor':
         mensaje_tipo = "mayores al umbral"
     else:
         mensaje_tipo = "menores al umbral"
-    # se aplica list para transformar el producto en lista, y el keys saca todas las claves del diccionario obtenido de la funcion
+    # se aplica list para transformar el producto_que_cumple en lista, y el keys saca todas las claves del diccionario obtenido de la funcion
+    # print(productos_que_cumplen.keys()), genera algo similar a una lista pero no es una lista se require , aplicar list() para dejarlo transformado en una lista
     nombres_productos = list(productos_que_cumplen.keys())
     # print(nombres_productos)
     productos = ", ".join(nombres_productos)
