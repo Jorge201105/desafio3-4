@@ -18,7 +18,7 @@ def filtro(lista, valor,condicion="mayor"):
 
 umbral = int(sys.argv[1])
 
-tipo_comparacion = 'mayor'
+tipo_comparacion = "mayor"
 if len(sys.argv) == 3:
     tipo_comparacion = sys.argv[2].lower()
 
@@ -29,7 +29,7 @@ else:
     productos_que_cumplen = filtro(precios, umbral, tipo_comparacion)
     # se genera un diccionario con lo que cumple
     # print(productos_que_cumplen)
-    if tipo_comparacion == 'mayor':
+    if tipo_comparacion == "mayor":
         mensaje_tipo = "mayores al umbral"
     else:
         mensaje_tipo = "menores al umbral"
