@@ -16,4 +16,19 @@ def productoria(lista):
         prod=prod*elemento
     return prod
 
-        
+def calcular(**kwargs):
+    
+   
+    for k,v in kwargs.items():
+        if "fact" in k:
+            print (f"El factorial de {v} es {factorial(v)} ")
+            
+        else: 
+            print(f"La productoria de {v} es {productoria(v)} ")       
+   
+    
+    
+
+calcular(fact_1=5, prod_1=[3,6,4,2,8], fact_2=6)            
+
+
